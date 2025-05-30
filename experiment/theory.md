@@ -35,6 +35,7 @@ Or equivalently, the percentage voltage rise is:
 This formula shows that Vr > Vs when the line has significant inductance and capacitance under light or no load. 
 
 5.🛠️ How to Minimize Ferranti Effect
+
 *Connect reactive loads (inductive) at the receiving end.
 
 *Use shunt reactors to absorb excess reactive power.
@@ -44,6 +45,7 @@ This formula shows that Vr > Vs when the line has significant inductance and cap
 *Load the line—the effect is negligible under full load conditions.
 
 6.📈Effect Observation
+
 *Voltage rises gradually along the line from sending to receiving end.
 
 *More pronounced in underground cables due to high capacitance.
@@ -51,6 +53,7 @@ This formula shows that Vr > Vs when the line has significant inductance and cap
 *Increased overvoltage stress at the receiving end.
 
 7.📌 Key Observations
+
 *The longer the line, the greater the Ferranti Effect.
 
 *The higher the line voltage and frequency, the stronger the effect.
@@ -58,6 +61,7 @@ This formula shows that Vr > Vs when the line has significant inductance and cap
 *It's more serious in underground cables (higher C) than in overhead lines.
 
 8.✅ Conclusion
+
 The Ferranti Effect is a vital consideration in high-voltage long-distance AC power transmission, especially during light-load or no-load operation. It arises due to the interplay between the line capacitance and inductance, causing the receiving end voltage to exceed the sending end voltage.
 
 *This overvoltage can cause:
