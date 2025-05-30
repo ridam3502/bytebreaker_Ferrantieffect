@@ -1,7 +1,10 @@
-### References
+References
+D. P. Kothari, I. J. Nagrath, Modern Power System Analysis, Tata McGraw-Hill, 4th Edition.
 
-1. M. S. Naidu, V. Kamaraju, *High Voltage Engineering*, Tata McGraw-Hill, 5th Edition.
-2. C. L. Wadhwa, *Electrical Power Systems*, New Age International Publishers.
-3. IEEE Std 4-2013, *IEEE Standard Techniques for High-Voltage Testing*.
-4. https://www.electrical4u.com/suspension-insulator/
-5. https://nptel.ac.in/courses/108105131 (NPTEL Lecture Series on High Voltage Engineering)
+C. L. Wadhwa, Electrical Power Systems, New Age International Publishers.
+
+J. D. Glover, M. Sarma, T. J. Overbye, Power System Analysis and Design, Cengage Learning, 6th Edition.
+
+https://www.electrical4u.com/ferranti-effect/
+
+https://nptel.ac.in/courses/108101007 (NPTEL Lecture Series on Power System Analysis)
