@@ -1,0 +1,588 @@
+
+    /* Base Styles */
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+      min-height: 100vh;
+      align-items: center; /* Center content horizontally */
+    }
+
+    /* Dark Mode Styles */
+    body.dark {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+    body.dark .modal-content {
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+      border-color: #444;
+    }
+    body.dark input, body.dark select, body.dark button:not(.action-btn-delete):not(.primary-action-btn) {
+        background-color: #333;
+        color: #e0e0e0;
+        border-color: #555;
+    }
+    body.dark button:hover:not(.action-btn-delete):not(.primary-action-btn) {
+        background-color: #444;
+    }
+    body.dark th {
+        background-color: #2a2a2a !important;
+    }
+    body.dark td {
+        border-color: #444 !important;
+    }
+    body.dark .control-panel, body.dark .simulation-display, body.dark .analytics-dashboard, body.dark .experiment-history-panel, body.dark .explanation, body.dark .guidance-panel, body.dark .comparison-panel {
+        background-color: #282828;
+        border-color: #404040;
+    }
+    body.dark .primary-action-btn {
+        background-color: #0056b3; /* Darker blue for dark mode */
+    }
+    body.dark .primary-action-btn:hover {
+        background-color: #004494;
+    }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b2ff; }
+    body.dark .input-group span.unit { color: #66b2ff; }
+    body.dark #string-efficiency-display { color: #2ecc71; }
+    body.dark .guidance-panel {
+        border-left-color: #66b2ff;
+        background-color: #2c3e50;
+    }
+    body.dark #personalized-feedback {
+        background-color: #2c3e50;
+        border-color: #3498db;
+        color: #ecf0f1;
+    }
+    body.dark .connector-path { stroke: #666; }
+    body.dark .tab-buttons button {
+        background-color: #333;
+        border-color: #555;
+        color: #e0e0e0;
+    }
+    body.dark .tab-buttons button.active {
+        background-color: #282828;
+        border-bottom-color: #282828;
+    }
+    body.dark #designModeContent {
+        background-color: #333;
+        border-color: #555;
+    }
+    body.dark #designModeContent h4 {
+        color: #e0e0e0;
+    }
+    body.dark .comparison-item {
+        border-color: #444;
+        background-color: #2c2c2c;
+    }
+    body.dark .comparison-item h3 {
+        color: #66b2ff;
+    }
+    body.dark #currentRunDataTable th {
+        background-color: #3a3a3a !important;
+    }
+    body.dark #compareRunsSelect {
+        background-color: #333;
+        color: #e0e0e0;
+        border-color: #555;
+    }
+
+
+    /* Main Container */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Top Navigation Tabs */
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 5px;
+    }
+    body.dark .tab-buttons {
+        background-color: #2a2a2a;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .tab-button {
+        padding: 12px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: #555;
+        border-bottom: 3px solid transparent;
+        transition: all 0.2s ease-in-out;
+        border-radius: 5px;
+        margin: 0 2px;
+    }
+    body.dark .tab-button {
+        color: #bbb;
+    }
+
+    .tab-button:hover {
+        background-color: #d0d0d0;
+        color: #333;
+    }
+    body.dark .tab-button:hover {
+        background-color: #3a3a3a;
+        color: #e0e0e0;
+    }
+
+    .tab-button.active {
+        background-color: #fff;
+        border-bottom-color: #007bff;
+        color: #007bff;
+        font-weight: bold;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    }
+    body.dark .tab-button.active {
+        background-color: #1e1e1e;
+        border-bottom-color: #66b2ff;
+        color: #66b2ff;
+    }
+
+    /* Main Content Area */
+    .main-content {
+        flex-grow: 1; /* Takes remaining space */
+        width: 100%; /* Ensure it takes full width of container */
+        box-sizing: border-box;
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .control-panel, .simulation-display, .analytics-dashboard, .experiment-history-panel, .explanation, .guidance-panel, .comparison-panel {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .guidance-panel {
+        border-left: 5px solid #3498db;
+        background-color: #eaf5ff;
+        text-align: left; /* Align text left within guidance */
+    }
+    .guidance-panel p { margin: 5px 0; font-size: 1.05em; }
+
+
+    /* Updated input-group for two-column layout */
+    .input-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns */
+      gap: 15px 30px; /* Gap between rows and columns */
+      margin-bottom: 15px;
+      justify-items: stretch; /* Stretch items to fill grid area */
+    }
+
+    .input-group label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align label text to start */
+      margin: 0; /* Remove previous margin */
+      font-size: 0.9em;
+      width: 100%; /* Ensure label takes full width of its grid cell */
+    }
+    /* Updated input styles for number inputs and sliders */
+    .input-group input[type="number"], .input-group select {
+      width: 100%; /* Make inputs fill the column width */
+      padding: 8px 12px; /* Increased padding for better touch targets */
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: left; /* Align text left */
+      box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+    /* Remove specific styles for range inputs as they are no longer used here */
+    .input-group input[type="range"] {
+        display: none; /* Hide if still present */
+    }
+    .input-group span.unit {
+      font-weight: bold;
+      color: #3498db;
+      margin-top: 3px;
+      align-self: flex-end; /* Align unit to the right */
+      margin-left: auto; /* Push to the right */
+    }
+    .input-group .slider-value {
+        display: none; /* Hide slider value display */
+    }
+
+
+    #insulator-string-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      min-height: 150px; 
+    }
+    body.dark #insulator-string-wrapper { border-color: #444; }
+
+    #insulator-string {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      gap: 5px; 
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+      padding: 10px 0;
+    }
+
+    .disc {
+      width: 50px; /* Increased width for better visibility */
+      height: 90px; /* Increased height for better visibility */
+      border-radius: 10px; /* More rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Stronger shadow */
+      color: white;
+      font-weight: bold;
+      font-size: 0.8em; /* Slightly larger font */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      text-align: center;
+      background-image: url('2ndpart.png'); 
+      cursor: pointer; /* Changed to pointer for interactivity */
+      user-select: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      position: relative;
+      background: linear-gradient(145deg, #3498db, #2980b9); /* Default Gradient background */
+      border: 2px solid #ffffff; /* White border for definition */
+      box-sizing: border-box;
+      flex-shrink: 0; /* Prevent discs from shrinking */
+    }
+    .disc:hover {
+        transform: scale(1.05);
+    }
+    /* Style for fault/damaged disc */
+    .disc.faulty {
+        background: linear-gradient(145deg, #e74c3c, #c0392b) !important; /* Red for fault, !important to override dynamic color */
+        animation: spark 0.5s infinite alternate;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    }
+    @keyframes spark {
+        from { box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+        to { box-shadow: 0 0 20px rgba(255, 100, 100, 1); }
+    }
+    .disc.punctured {
+        background: linear-gradient(145deg, #7f8c8d, #34495e) !important; /* Grey/Dark for punctured */
+        color: #bdc3c7;
+        text-decoration: line-through;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    /* Voltage Flow Animation */
+    @keyframes voltage-pulse {
+        0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+        50% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+        100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+    }
+    .disc.voltage-flow-active {
+        animation-name: voltage-pulse;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+
+    #string-efficiency-display {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #27ae60;
+    }
+
+    #charts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+    }
+    .chart-box {
+        flex: 1 1 400px; 
+        min-width: 300px;
+        height: 350px; 
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #e9ecef;
+    }
+
+    button {
+      padding: 10px 18px; /* Larger padding */
+      font-size: 1em; /* Slightly larger font */
+      cursor: pointer;
+      margin: 8px 5px; /* Increased margin */
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #e0e0e0;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    button:hover {
+      background-color: #d0d0d0;
+      transform: translateY(-1px);
+    }
+    button:active {
+        transform: translateY(0px);
+    }
+    .primary-action-btn {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
+    .primary-action-btn:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    .action-btn { background-color: #3498db; color: white; border: none; }
+    .action-btn:hover { background-color: #2980b9; }
+    .action-btn-delete { background-color: #e74c3c; color: white; border: none; }
+    .action-btn-delete:hover { background-color: #c0392b; }
+
+    #themeToggleContainer {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10; /* Ensure it's above other content */
+    }
+    .modal {
+      display: none; position: fixed; z-index: 1000;
+      padding-top: 60px; left: 0; top: 0;
+      width: 100%; height: 100%; overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fefefe; margin: auto; padding: 25px;
+      border: 1px solid #888; width: 80%; max-width: 600px; /* Wider modal */
+      border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .modal .close {
+      color: #aaa; float: right; font-size: 28px;
+      font-weight: bold; cursor: pointer;
+    }
+
+    #personalized-feedback {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #e6f7ff;
+        border: 1px solid #91d5ff;
+        border-radius: 44px;
+        font-style: italic;
+    }
+
+    .connector-svg {
+        width: 20px; 
+        height: 90px; /* Adjusted height for larger discs */
+        overflow: visible; 
+    }
+    .connector-path {
+        stroke: #aaa; 
+        stroke-width: 2;
+        fill: none;
+    }
+    
+    #manualNote {
+        width: calc(100% - 22px); 
+        padding: 8px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Step-specific visibility (can be refined) */
+    .step-controls { margin-top: 20px; }
+    .hidden-step-content { display: none !important; }
+
+    /* For user calculation input */
+    .user-calc-input {
+        width: 100%; /* Make it fill the space */
+        padding: 8px 12px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    .user-calc-feedback {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .user-calc-feedback.correct { color: #27ae60; }
+    .user-calc-feedback.incorrect { color: #e74c3c; }
+
+    /* Loading Indicator */
+    #loadingIndicator {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px 30px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #fff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 10px auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Comparison View Styles */
+    .comparison-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .comparison-item {
+        flex: 1 1 45%; /* Adjust as needed */
+        min-width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        text-align: left;
+    }
+    .comparison-item h3 {
+        margin-top: 0;
+        color: #007bff;
+    }
+    .comparison-item .chart-box {
+        height: 250px; /* Smaller charts for comparison */
+    }
+    .comparison-remove-btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+    .comparison-remove-btn:hover {
+        background-color: #c0392b;
+    }
+
+    /* Design Mode Styles */
+    #designModeContent {
+        padding: 15px;
+        border: 1px dashed #ccc;
+        border-radius: 5px;
+        margin-top: 15px;
+        background-color: #f9f9f9;
+    }
+    #designModeContent h4 {
+        margin-top: 0;
+        color: #2c3e50;
+    }
+    #designModeResult {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #27ae60;
+    }
+    .comparison-disc-string {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto;
+        border: 1px dashed #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        max-width: 200px; /* Constrain width for comparison */
+    }
+    .comparison-disc-string .disc {
+        width: 40px;
+        height: 70px;
+        font-size: 0.7em;
+    }
+    .comparison-disc-string .connector-svg {
+        height: 70px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .tab-buttons {
+            flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+            padding: 5px 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .tab-button {
+            flex-grow: 1; /* Tabs take equal width */
+            margin: 2px 0;
+            border-bottom: 3px solid transparent; /* Ensure bottom border for active state */
+            border-radius: 0;
+        }
+        .tab-button.active {
+            border-bottom-color: #007bff;
+        }
+        body.dark .tab-button.active {
+            border-bottom-color: #66b2ff;
+        }
+
+        .main-content {
+            padding: 15px;
+        }
+        #themeToggleContainer {
+            position: static; /* Adjust position for small screens */
+            text-align: right;
+            margin-bottom: 10px;
+            padding-right: 15px;
+        }
+        /* Adjust input-group for smaller screens */
+        .input-group {
+            grid-template-columns: 1fr; /* Single column on small screens */
+            gap: 15px;
+        }
+    }
+  

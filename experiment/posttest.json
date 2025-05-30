@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the Ferranti Effect?",
+      "answers": {
+        "a": "Receiving end voltage is less than sending end voltage.",
+        "b": "Receiving end voltage is greater than sending end voltage.",
+        "c": "Sending end current is greater than receiving end current.",
+        "d": "Power factor becomes leading at the sending end."
+      },
+      "explanations": {
+        "a": "Incorrect – this is a typical voltage drop.",
+        "b": "Correct – this defines the Ferranti Effect.",
+        "c": "Incorrect – current relation is different.",
+        "d": "Incorrect – power factor can be leading but doesn't define the effect.",
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which device is commonly used to mitigate the Ferranti Effect?",
+      "answers": {
+        "a": "Series Capacitor",
+        "b": "Shunt Reactor",
+        "c": "Tap Changing Transformer",
+        "d": "Series Resistor"
+      },
+      "explanations": {
+        "a": "Incorrect – series capacitors can worsen it.",
+        "b": "Correct – shunt reactors absorb leading reactive power.",
+        "c": "Incorrect – used for voltage regulation under load.",
+        "d": "Incorrect – resistors cause voltage drop, not suitable for this problem.",
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

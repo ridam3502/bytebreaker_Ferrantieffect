@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which component is primarily responsible for drawing leading current in a transmission line?",
+      "answers": {
+        "a": "Series Inductance",
+        "b": "Shunt Capacitance",
+        "c": "Series Resistance",
+        "d": "Shunt Conductance"
+      },
+      "explanations": {
+        "a": "Incorrect – inductance draws lagging current.",
+        "b": "Correct – capacitance draws leading current.",
+        "c": "Incorrect – resistance is resistive.",
+        "d": "Incorrect – conductance is resistive."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of load condition is most likely to exhibit the Ferranti Effect?",
+      "answers": {
+        "a": "Heavy inductive load",
+        "b": "Heavy capacitive load",
+        "c": "No-load or light load",
+        "d": "Unity power factor load"
+      },
+      "explanations": {
+        "a": "Incorrect – heavy inductive loads cause voltage drop.",
+        "b": "Incorrect – heavy capacitive loads can also cause voltage rise but Ferranti is specific to no-load.",
+        "c": "Correct – the effect is prominent under no-load or light load conditions.",
+        "d": "Incorrect – unity power factor load doesn't typically cause this effect.",
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
