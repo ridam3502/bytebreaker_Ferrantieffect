@@ -71,8 +71,8 @@ NEglegible resistance R=0 under ideal condition
 
 
 
-Sending End                Transmission Line                Receiving End
-   o ──────/\/\/\/─────┬────/\/\/\/─────┬──── o
+Sending End                Transmission Line                
+   o ──────/\/\/\/─────┬────/\/\/\/─────┬──── o  recieving End 
            jXL        === C/2       === C/2
                        GND           GND
 
