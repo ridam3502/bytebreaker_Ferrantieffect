@@ -1,8 +1,8 @@
-🧭 1. Introduction
+ 1. Introduction
 
 The Ferranti Effect is a phenomenon in power transmission where the voltage at the receiving end of a long transmission line is higher than the sending end voltage, particularly under no-load or light-load condition
 
-📌 Where It Occurs:
+ Where It Occurs:
 
 *Long transmission lines (typically >150 km
 
@@ -16,7 +16,7 @@ The Ferranti Effect is a phenomenon in power transmission where the voltage at t
 2. Why Does the Ferranti Effect Occur?
 
 
-✅ Main Cause:
+ Main Cause:
 
 The transmission line behaves like a capacitor, especially under light-load or no-load conditions.
 
@@ -35,7 +35,7 @@ The result is an increase in receiving end voltage.
 
 
 
-3.🔍 What Causes the Ferranti Effect?
+3. What Causes the Ferranti Effect?
 
 
 The Ferranti Effect occurs due to the line capacitance and inductive reactance of transmission lines.
@@ -77,7 +77,7 @@ Sending End                Transmission Line
                        GND           GND
 
 
-4.🧮 Mathematical Derivation of Ferranti Effect
+4. Mathematical Derivation of Ferranti Effect
 
 Let:​
 Vs  = Sending end voltage
@@ -108,7 +108,7 @@ Or equivalently, the percentage voltage rise is:
 
 This formula shows that Vr > Vs when the line has significant inductance and capacitance under light or no load.
 
-🔹 Charging Current (No Load)
+ Charging Current (No Load)
 Under no load:
 
 I_C = jωC × V_R
@@ -116,7 +116,7 @@ This charging current flows through the line inductance L
 
 L, producing a voltage rise at the receiving end.
 
-🔹 Voltage Rise (Due to Inductance
+ Voltage Rise (Due to Inductance
 
 Voltage drop across inductance:
 
@@ -141,7 +141,7 @@ V_R = V_S / (1 - ω²LC)
 
 
 
-5.🛠️ How to Minimize Ferranti Effect
+5. How to Minimize Ferranti Effect
 
 
 *Connect reactive loads (inductive) at the receiving end.
@@ -155,7 +155,7 @@ V_R = V_S / (1 - ω²LC)
 
 *Load the line—the effect is negligible under full load conditions.
 
-🔍 6. When Is the Ferranti Effect Significant?
+ 6. When Is the Ferranti Effect Significant?
 
 Line length > 150 km
 
@@ -168,7 +168,7 @@ Higher system frequency (ω = 2πf)
 It is more pronounced in underground cables due to higher capacitance per unit length.
 
 
-6.📈Effect Observation
+6.Effect Observation
 
 *Voltage rises gradually along the line from sending to receiving end.
 
@@ -176,7 +176,7 @@ It is more pronounced in underground cables due to higher capacitance per unit l
 
 *Increased overvoltage stress at the receiving end.
 
-7.📌 Key Observations
+7. Key Observations
 
 *The longer the line, the greater the Ferranti Effect.
 
@@ -188,7 +188,7 @@ It is more pronounced in underground cables due to higher capacitance per unit l
 
 
 
-✅ Solutions:
+ Solutions:
 Use shunt reactors at receiving end to absorb excess reactive power.
 
 Load the line appropriately to reduce effect.
@@ -197,7 +197,7 @@ Capacitive compensation devices (inversely tuned to reduce net capacitance).
 
 
 
-8.✅ Conclusion
+8. Conclusion
 
 The Ferranti Effect is a vital consideration in high-voltage long-distance AC power transmission, especially during light-load or no-load operation. It arises due to the interplay between the line capacitance and inductance, causing the receiving end voltage to exceed the sending end voltage.
 
