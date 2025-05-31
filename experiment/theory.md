@@ -116,18 +116,29 @@ This charging current flows through the line inductance L
 
 L, producing a voltage rise at the receiving end.
 
-🔹 Voltage Rise (Due to Inductance)
+🔹 Voltage Rise (Due to Inductance
+
 Voltage drop across inductance:
 
 ΔV = jωL × I_C
+
    substitute Ic= Jwc *Vr
+
+   
 ΔV = jωL × jωC × V_R
+
 ΔV = -ω² × L × C × V_R
+
 Therefore, the sending end voltage is:
+
 V_S = V_R + ΔV
+
 V_S = V_R - ω² × L × C × V_R
-Thus:
+
+Thus
+
 V_R = V_S / (1 - ω²LC)
+
 
 
 5.🛠️ How to Minimize Ferranti Effect
