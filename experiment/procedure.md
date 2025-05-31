@@ -26,7 +26,7 @@ Set Load Conditions:
  
 Simulation time: 1–2 seconds
 
-Use discrete solver or  for better accuracy
+Use discrete solver or for better accuracy
 
 Time step: 1e-5 or smalle
 For observing Ferranti Effect, set the load to "No Load" or "Light Load".
